@@ -1,0 +1,183 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,800;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Prompt:ital@0;1&display=swap');
+
+/* General Styles */
+body, html {
+    margin-right: 0%;
+
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #1f1d1d;
+    width: 100%;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    color: white;
+    width: 20vw;
+    background-color: #7a7e7e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar nav {
+    width: 100%;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav li {
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    color: #faf0f0;
+    width: 100%; /* Full width for better responsiveness */
+}
+
+.sidebar nav li:nth-child(3) {
+    background-color: #394b52;
+}
+
+.sidebar nav li:hover {
+    background-color: #394b52;
+}
+
+/* Developer Picture Styles */
+.devpic {
+    order: 2; /* Add this line to change the order */
+    margin: 80px auto;
+    text-align: center;
+    flex: 1;
+}
+
+/* Main Content Styles */
+.main {
+    order: 1; /* Add this line to change the order */
+    width: 100%;
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    margin-right: 50px;
+    margin-top:20px;
+    padding: 20px;
+    flex-direction: column; /* Adjusted flex direction for better responsiveness */
+}
+
+
+.devpic img {
+    width: 100%;
+    max-width: 492px;
+    border-radius: 24px;
+}
+
+/* Developer
+ Information Styles */
+.devInfo {
+    padding: 61px;
+    text-align: left;
+    max-width: 600px;
+    margin: 0px auto;
+    flex: 2;
+    word-wrap: break-word; /* Add this line */
+}
+
+.hello, .name, .about {
+    margin-bottom: 32px;
+    color: #333;
+    margin-top: 30px;
+    font-size: 23px;
+}
+
+.moreabout {
+    text-align: justify;
+    margin-bottom: 32px;
+    color: #1d1a1a;
+}
+
+/* Button Styles */
+.devInfo .buttons-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cta-button {
+    border-radius: 50px;
+    padding: 15px 30px;
+    color: #746f6f;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    background-color: rgb(218, 215, 224);
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #35424a;
+    color: #fff;
+}
+
+/* Social Icons Styles */
+.social-icons a {
+    margin: 0 8px;
+    color: #dbdee2;
+}
+/* Media Queries for Responsiveness */
+/* Media Queries for Responsiveness */
+@media only screen and (max-width: 768px) {
+
+    .container {
+        flex-direction: column; /* Change back to column for smaller screens */
+        overflow: hidden; /* Prevent overflow from the container */
+    }
+
+    .sidebar {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .main {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .devpic {
+        margin: 20px auto;
+    }
+
+    
+    .devInfo {
+        margin: -9px;
+        box-sizing: border-box; /* Include padding in total width */
+        padding: 20px; /* Equal padding on both sides */
+        max-width: calc(100% - 40px); /* Adjusted max-width to account for padding */
+        overflow-wrap: break-word; /* Use overflow-wrap instead of word-wrap */
+        margin-right: auto; /* Add this line to align the right edge with the container */
+    }
+}
+
+
+

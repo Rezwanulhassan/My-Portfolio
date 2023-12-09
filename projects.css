@@ -1,0 +1,155 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+/* Container Styles */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 20%;
+    background-color: #333;
+    padding: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px 0;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav a:hover {
+    background-color: #555;
+}
+
+/* Content Styles */
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Projects Section Styles */
+.section-title {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.project-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project-card {
+    width: calc(33.33% - 20px); /* Adjusted width for three cards with space between */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.project-details {
+    padding: 20px;
+}
+
+.project-title {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: #555;
+}
+
+/* Load More Button Styles */
+.load-more-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.load-more-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.load-more-btn:hover {
+    background-color: #555;
+}
+
+/* Media Queries for Responsiveness */
+@media only screen and (max-width: 1200px) {
+    .project-card {
+        width: calc(50% - 20px); /* Adjusted width for two cards with space between */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+    }
+
+    .project-cards-container {
+        justify-content: center;
+    }
+
+    .project-card {
+        width: calc(100% - 20px); /* Full width for better responsiveness on smaller screens */
+    }
+}
